@@ -1,0 +1,90 @@
+section#porquerimac {
+  padding-bottom: 20px;
+  h2 {
+    margin-top: 0px;
+    font-weight: 700;
+    color: $primary-color-text;
+
+  }
+  .containerporque {
+    background: $third-color;
+    min-height: 100px;
+    box-shadow: 0 13px 34px -20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 98%;
+    margin: 10px auto;
+    @media only screen and(min-width: 1050px) {
+      min-height: 140px;
+
+    }
+
+    .item {
+      border-bottom: solid 0.5px #c6cbd2;
+      height: 100%;
+      min-height: 100px;
+      padding-top: 30px;
+
+      display: flex;
+      &:last-child{
+        border-right: 0;
+      }
+
+      @media only screen and(min-width: 768px) {
+        border-right: solid 0.5px #c6cbd2;
+        border-bottom: 0px;
+
+      }
+      @media only screen and(min-width: 1050px) {
+        min-height: 140px;
+        padding-top: 50px;
+
+      }
+
+      .texto-porque {
+        padding-left: 14px;
+        font-weight: 700;
+        color: $primary-color-text;
+
+        position: relative;
+        margin-left: 20px;
+
+        @media only screen and(min-width: 768px) {
+          margin-left: 0px;
+
+        }
+        p {
+          font-size: 13.5px;
+        }
+
+        &::before {
+
+          content: " ";
+          width: 3px;
+          height: 40px;
+          background: $secondary-color;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+
+        }
+      }
+      .imagen-porque {
+
+        margin-top: -10px;
+
+        span {
+          font-size: 61px;
+          text-align: right;
+          padding: 7px 5px;
+          margin-top: 0px;
+          color: $secondary-color;
+        }
+        .icon-ambulancia {
+          font-size: 42px;
+          padding: 0px;
+        }
+      }
+
+    }
+  }
+}

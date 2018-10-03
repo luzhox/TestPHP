@@ -1,0 +1,31 @@
+.modalvehicularfix{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    display: none;   
+
+   .embed-container {
+        background-color: white;
+        position: relative;
+        top:0;
+        margin-top: 25%;
+        transform: translateY(-25%);
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    .embed-container iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @media only screen and (min-width: 1050px) {
+        .container {
+            width: 60%;
+        }
+    }
+}

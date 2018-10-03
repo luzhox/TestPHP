@@ -1,0 +1,56 @@
+section#porqueVida {
+  .title {
+    &__principal{
+      font-size: 20px;
+      font-weight: 300;
+      color: $primary-color-text;
+      margin-bottom: 0;
+      strong{
+        font-weight: 500;
+      }
+      @media screen and (min-width: 600px){
+        font-size: 25px;
+      }
+    }
+    &__text{
+      font-size: 16px;
+      margin: 20px 0 30px;
+      line-height: 23px;
+      @media screen and (min-width: 600px){
+        font-size: 20px;
+        line-height: 1.4;
+      }
+    }
+  }
+  .containerporque {
+    min-height: 100px;
+    max-width: 98%;
+    margin: 10px auto;
+    @media only screen and(min-width: 1050px) {
+      min-height: 140px;
+    }
+    .item {
+      padding: 13px;
+      background: $bg-cards;
+      border-radius: 2px;
+      text-align: center;
+      min-height: 205px;
+      &:last-child{
+        border-right: 0;
+      }
+      &-image{
+        width: 66px;
+        margin: auto;
+      }
+      &-title{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      &-subtext {
+        font-size: 15px;
+        line-height: 1.33;
+      }
+    }
+  }
+}

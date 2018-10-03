@@ -1,0 +1,149 @@
+.header-vehicular {
+  background: url(../images/bg-hero-mobile.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: bottom;
+  background-color: #eeeef2;
+  padding-top: 18px;
+  background-repeat: no-repeat;
+  @media only screen and (min-width: 768px) {
+    background: url(../images/bg-hero.jpg) transparent;
+    background-color: #eeeef2;
+    background-size: cover;
+    background-position: right;
+  }
+  .container-header {
+    &-breadcrumbs{
+      color:$primary-color-text;
+      font-size: 12px;
+      margin-top: 50px;
+      font-weight: 300;
+    }
+    &-text {
+      text-align: center;
+      .title__subtext {
+        font-size: 30px;
+        line-height: normal;
+        padding-top: 0;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+        color: $primary-color-text;
+        margin: 10px 0;
+        text-align: center;
+      }
+      .calltoaction{
+        display: block;
+        margin: auto;
+        @media screen and (min-width: 920px){
+          display: inline-block;
+        }
+      }
+      .btn-primary {
+        cursor: pointer;
+        border-radius: 5px;
+        color: $third-color;
+        background: $secondary-color;
+        text-align: center;
+        padding: 15px;
+        display: block;
+        width: 220px;
+        font-weight: bold;
+        margin: auto;
+        box-shadow: 0 17px 14px -16px rgba(153, 221, 0, 0.61);
+        &:hover {
+          background-color: #6b9900;
+        }
+        @media screen and (min-width: 920px){
+          max-width: 300px;
+          display: inline-block;
+        }
+      }
+      .btn-secondary {
+        cursor: pointer;
+        border-radius: 5px;
+        color: $secondary-color;
+        background: white;
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+        padding: 15px;
+        display: block;
+        width: 220px;
+        font-weight: bold;
+        box-shadow: 0 2px 4px 0 rgba(181, 181, 181, 0.5);
+        &:hover {
+          background-color: #fafafa;
+        }
+        span {
+          margin-left: 10px;
+          color: $secondary-color;
+        }
+        @media screen and (min-width: 920px){
+          display: inline-block;
+          margin-left: 20px;
+          margin-top: 0;
+          width: 180px;
+        }
+      }
+      .title__promocion {
+        font-size: 16px;
+        line-height: normal;
+        color: $primary-color-text;
+        margin-bottom: 20px;
+      }
+    }
+    &-image {
+      margin-top: 40px;
+      text-align: center;
+    }
+    img {
+      width: 90%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .activo {
+    a {
+      border-bottom: 3px solid $secondary-color;
+      padding-bottom: 15px;
+    }
+  }
+  .header-vehicular {
+    padding-top: 88px;
+    .container-header {
+      &-breadcrumbs{
+        font-size: 14px;
+        margin-top: 60px;
+      }
+      &-text {
+        text-align: left;
+        .title__subtext{
+          font-size: 35px;
+          padding-top: 30px;
+        }
+        .title__promocion{
+          font-size: 17px;
+          margin-bottom: 40px;
+        }
+        h1 {
+          font-size: 35px;
+          line-height: normal;
+          text-align: left;
+        }
+        a {
+          max-width: 300px;
+          margin: 0;
+        }
+      }
+      &-image {
+        margin-top: 40px;
+      }
+    }
+  }
+}

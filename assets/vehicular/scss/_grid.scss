@@ -1,0 +1,90 @@
+$columns : 12;
+$column-width : 100%/$columns;
+$breakpoints : (s : 0, m : 426px, l : 1050px );
+$breakpoints-footer : (s : 0, m : 626px, l : 1050px);
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+@media only screen and (min-width: 426px) {
+    .container {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 1050px) {
+    .container {
+        width: 75%;
+    }
+}
+.container .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+.row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row .col {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+}
+.row .col[class*="push-"], .row .col[class*="pull-"] {
+    position: relative;
+}
+  
+@function column-width($column){
+  @return $column-width*$column;
+}
+@mixin column($screen, $min-width){
+  @media (min-width:$min-width){
+    @for $i from 1 through $columns {
+      .row .col.#{$screen}#{$i} {
+        width: column-width($i);
+        margin-left: auto;
+        left: auto;
+        right: auto;
+      }
+    }
+    @for $i from 1 through $columns {
+        .row .col.pull-#{$screen}#{$i} {
+          right: column-width($i);
+        }
+        .row .col.push-#{$screen}#{$i} {
+          left: column-width($i);
+        }
+      }
+  }
+}
+@each $name, $width in $breakpoints {
+  @include column($name, $width);
+}
+
+// Only on footer
+@mixin column-footer($screen, $min-width){
+    @media (min-width:$min-width){
+      @for $i from 1 through $columns {
+        footer .row .col.#{$screen}#{$i} {
+          width: column-width($i);
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+      }
+    }
+  }
+
+@each $name, $width in $breakpoints-footer {
+    @include column-footer($name, $width);
+}
